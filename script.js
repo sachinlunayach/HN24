@@ -160,3 +160,10 @@ document.ontouchstart = evt => birthday.onClick(evt)
 })()
 
 };
+
+function setName() {
+    var name = document.getElementById("name").value;
+    localStorage.setItem('name', name);
+    // Redirect to the index.html page after setting the name
+    window.location.href = "wish.html";
+}
