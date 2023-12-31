@@ -176,11 +176,11 @@ function setName() {
     var name = document.getElementById("name").value;
     if (name === '') {
         alert("Please Enter Your Name");
-        return false; // prevent form submission
+        return false; 
     } else {
         localStorage.setItem('name', name);
-        // Redirect to the wish.html page after setting the name
+
         window.location.href = "wish.html";
-        return false; // prevent form submission
+        return false; 
     }
 }
