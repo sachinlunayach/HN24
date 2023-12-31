@@ -247,12 +247,12 @@ span.next:before{
 
  
   span.current {
-      position: absolute;
-      top: 50%;
-      right: 50%;
-      margin-right: -200px;
-      animation: vai_2016 5s ease-in-out 5s forwards;
-  }
+    position: absolute;
+    top: 47.5%;
+    right: 60%;
+    margin-right: -200px;
+    animation: vai_2016 5s ease-in-out 5s forwards;
+}
   .sec2 {
     width: 70px;
     height: 70px;
