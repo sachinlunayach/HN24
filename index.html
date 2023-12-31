@@ -64,15 +64,27 @@
             }
 </style>
 <body>
-    <div class="main">
+    <!-- <div class="main">
         <div class="register">
             <form>
                 <br>
                 <br>
-                <input type="text" name="myname" id="name" placeholder="Enter Your Name">
+                <input  type="text" name="myname" id="name"  placeholder="Enter Your Name" required>
                 <br>
                 <br>
                 <a class="btn btn-primary" href="javascript:void(0);" onclick="setName()" role="button">Submit</a>
+            </form>
+        </div>
+    </div> -->
+    <div class="main">
+        <div class="register">
+            <form onsubmit="return setName()">
+                <br>
+                <br>
+                <input type="text" name="myname" id="name" placeholder="Enter Your Name" required>
+                <br>
+                <br>
+                <button class="btn btn-primary" type="submit">Submit</button>
             </form>
         </div>
     </div>

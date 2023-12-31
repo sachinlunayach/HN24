@@ -161,9 +161,26 @@ document.ontouchstart = evt => birthday.onClick(evt)
 
 };
 
+// function setName() {
+//     if(name === ''){
+//       alert("Please Enter Your Name")
+//     }else{
+
+//         var name = document.getElementById("name").value;
+//         localStorage.setItem('name', name);
+       
+//         window.location.href = "wish.html";
+//     }
+// }
 function setName() {
     var name = document.getElementById("name").value;
-    localStorage.setItem('name', name);
-    // Redirect to the index.html page after setting the name
-    window.location.href = "wish.html";
+    if (name === '') {
+        alert("Please Enter Your Name");
+        return false; // prevent form submission
+    } else {
+        localStorage.setItem('name', name);
+        // Redirect to the wish.html page after setting the name
+        window.location.href = "wish.html";
+        return false; // prevent form submission
+    }
 }
