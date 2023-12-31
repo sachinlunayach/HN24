@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy New Year 2024</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style.scss">
 </head>
 <style>
     @media screen and (max-width: 500px) {
@@ -67,10 +66,14 @@
 
     <script>
         function updateYear() {
+         
+            
             var yearElement = document.getElementById('year');
             if (yearElement) {
-                yearElement.textContent = '202';
+              yearElement.textContent = '202';
+              
             }
+          
         }
 
         function startAnimation() {
@@ -85,17 +88,14 @@
                 document.body.appendChild(happyDiv);
 
                 happyDiv.classList.add('show');
-                // setTimeout(() => {
-                //   playBackgroundAudio();
-                //     myFirework();
-                //     speakGreeting("Happy New Year, " + userName);
-                // }, 1000);
+              
+                
                 playBackgroundAudio();
                     myFirework();
                     speakGreeting("Happy New Year, " + userName);
             }
         }
-
+       
 
         function speakGreeting(message) {
             var speechSynthesis = window.speechSynthesis;

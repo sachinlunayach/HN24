@@ -78,7 +78,7 @@ span.next:before{
   width: 100px;
   height: 100px;
   display: block;
-  background: yellow;
+  background: #e8e7ec;
   border-radius: 50%;
   position: absolute;
   top:50%;
@@ -87,6 +87,7 @@ span.next:before{
     margin-right: -200px;
     z-index: -1;
     animation:vem_e_vai_sec2 10s ease-in-out forwards;
+
   }
   .sec2::before{
     content: '';
@@ -117,6 +118,7 @@ span.next:before{
   }
   
   canvas{display:block}
+
 
   a.author{
     font-size: 12px;
@@ -243,6 +245,14 @@ span.next:before{
     font-size: 25vw;
   }
 
+ 
+  span.current {
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      margin-right: -200px;
+      animation: vai_2016 5s ease-in-out 5s forwards;
+  }
   .sec2 {
     width: 70px;
     height: 70px;
@@ -279,7 +289,7 @@ span.next:before{
   span.next{
     margin-right: -163px;
   }
-  #cameraContainer {
+  /* #cameraContainer {
     position: fixed;
     bottom: 90px;
     right: 370px;
@@ -290,9 +300,9 @@ span.next:before{
     width: 100%;
     height: 100%;
     border-radius: 10%;
-  }
+  } */
 } 
-#cameraContainer {
+/* #cameraContainer {
   position: fixed;
   bottom: 20px;
   right: 360px;
@@ -304,5 +314,5 @@ span.next:before{
   width: 100%;
   height: 100%;
   border-radius: 10%;
-}
+} */
 
