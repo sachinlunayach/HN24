@@ -2,122 +2,89 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy New Year 2024</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <style>
-    @media screen and (max-width: 500px) {
-      .sec1 {
-        padding: 20% 5% 0% 5%;
-        color: yellow;
-      }
-
-      .sec1>span {
-        font-size: 25vw;
-      }
-
-      .sec2 {
-        width: 70px;
-        height: 70px;
-        margin-top: -85px;
-        margin-right: -50px;
-      }
-
-      /* Add styles for smaller screens */
-      .happy {
-        font-size: 50px;
-        font-weight: 170;
-        top: 56%;
-      }
-
-      span.next {
-        margin-right: -163px;
-      }
-
-      #cameraContainer {
-        position: fixed;
-        bottom: 90px;
-        right: 270px;
-        max-width: 150px;
-        max-height: 150px;
-      }
-
-      #capturedImage {
-        width: 100%;
-        height: 100%;
-        border-radius: 10%;
-      }
+    *{
+        margin: 0%;
+        padding: 0%;
     }
+    body{
+        background: url(../images/nature.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .main{
+        width: 400px;
+        margin: 100px auto 0px auto;
+    }
+    h1{
+        padding: 4px;
+        margin: 4px;
+        text-align: center;
+        font-size: 1.3rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .register{
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        font-size: 20px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+        color: white;
+    }
+    form{
+        margin: 40px;
+    }
+    input#name{
+        width: 300px;
+    }
+    input#btn{
+        padding: 6px;
+        margin-left: 100px;
+        width: 100px;
+        background-color: chocolate;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       
+    }
+    input{
+        border-radius: 8px;
+    }
+    .btn{
+        margin-left: 100px;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 10px;
+            }
 </style>
 <body>
-    <div class="sec1">
-        <span id="year">202</span>
-        <span class="current">3</span>
-        <span class="next">4</span>
-        <div class="sec2"></div>
-        
-      
+    <div class="main">
+        <div class="register">
+            <form>
+                <br>
+                <br>
+                <input type="text" name="myname" id="name" placeholder="Enter Your Name">
+                <br>
+                <br>
+                <a class="btn btn-primary" href="javascript:void(0);" onclick="setName()" role="button">Submit</a>
+            </form>
+        </div>
     </div>
-    <canvas id="birthday"></canvas>
-
-
 
     <script>
-        function updateYear() {
-            var yearElement = document.getElementById('year');
-            if (yearElement) {
-                yearElement.textContent = '202';
-            }
+        function setName() {
+            var name = document.getElementById("name").value;
+            localStorage.setItem('name', name);
+            // Redirect to the index.html page after setting the name
+            window.location.href = "wish.html";
         }
-
-        function startAnimation() {
-            var userName = localStorage.getItem('name');
-            if (userName) {
-                updateYear();
-
-                var happyDiv = document.createElement('div');
-                happyDiv.className = 'happy show';
-                happyDiv.innerText = "Happy New Year, " + userName;
-
-                document.body.appendChild(happyDiv);
-
-                happyDiv.classList.add('show');
-                setTimeout(() => {
-                    playBackgroundAudio();
-                    myFirework();
-                    speakGreeting("Happy New Year, " + userName);
-                }, 3000);
-            }
-        }
-
-
-        function speakGreeting(message) {
-            var speechSynthesis = window.speechSynthesis;
-            var utterance = new SpeechSynthesisUtterance(message);
-            speechSynthesis.speak(utterance);
-        }
-      
-
-
-        function playBackgroundAudio() {
-            var audio = new Audio("Happy2024.mp3");
-            audio.volume = 0.5;
-            audio.play().then(_ => {
-            }).catch(error => {
-                console.error('Error playing audio:', error);
-            });
-        }
-
-
-    
-    window.onload = startAnimation;
     </script>
-
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <script src="script.js"></script>
 </body>
-</html> 
+</html>
 
- 
