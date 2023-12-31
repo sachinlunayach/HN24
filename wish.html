@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy New Year 2024</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.scss">
 </head>
 <style>
     @media screen and (max-width: 500px) {
@@ -51,6 +52,7 @@
     }
 </style>
 <body>
+ 
     <div class="sec1">
         <span id="year">202</span>
         <span class="current">3</span>
@@ -83,11 +85,14 @@
                 document.body.appendChild(happyDiv);
 
                 happyDiv.classList.add('show');
-                setTimeout(() => {
-                    playBackgroundAudio();
+                // setTimeout(() => {
+                //   playBackgroundAudio();
+                //     myFirework();
+                //     speakGreeting("Happy New Year, " + userName);
+                // }, 1000);
+                playBackgroundAudio();
                     myFirework();
                     speakGreeting("Happy New Year, " + userName);
-                }, 1000);
             }
         }
 
@@ -101,8 +106,8 @@
 
 
         function playBackgroundAudio() {
-            var audio = new Audio("Happy2024.mp3");
-            audio.volume = 0.5;
+            var audio = new Audio("song.mp3");
+            audio.volume = 1.0;
             audio.play().then(_ => {
             }).catch(error => {
                 console.error('Error playing audio:', error);
@@ -112,6 +117,7 @@
 
     
     window.onload = startAnimation;
+
     </script>
 
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
